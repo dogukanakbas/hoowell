@@ -1,0 +1,739 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background: #0d2323;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sol Menü */
+.sidebar {
+  width: 270px;
+  background: #e3e3e3;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.profile-pic {
+  width: 56px;
+  height: 56px;
+  background: #ffe680;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+.profile-level {
+  font-size: 13px;
+  color: #555;
+}
+.search-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  margin-bottom: 8px;
+}
+.sidebar button {
+  background: #0d2323;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  margin-bottom: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar button:hover {
+  background: #1e3a3a;
+}
+
+/* Dashboard ana panel */
+.dashboard-main {
+  flex: 1;
+  padding: 36px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.panel-btn {
+  background: #e3e3e3;
+  color: #0d2323;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 28px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.panel-btn:hover {
+  background: #c9c9c9;
+}
+.logo-section {
+  text-align: center;
+}
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: gold;
+}
+.slogan {
+  font-size: 14px;
+  color: #ffe680;
+  margin-top: 2px;
+}
+
+.dashboard-pools {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.pool-card {
+  background: #e3e3e3;
+  border-radius: 12px;
+  padding: 24px 32px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.pool-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0d2323;
+  margin-bottom: 8px;
+}
+.pool-date {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 16px;
+}
+.pool-amount {
+  font-size: 28px;
+  color: #1e3a3a;
+  font-weight: bold;
+}
+
+.dashboard-bottom {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  justify-content: center;
+}
+.news-box, .promo-box {
+  background: #e3e3e3;
+  border-radius: 12px;
+  min-width: 320px;
+  min-height: 180px;
+  padding: 24px;
+  font-size: 22px;
+  color: #0d2323;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Order/Partner Register Panel */
+.order-page {
+  flex: 1;
+  padding: 48px 32px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.order-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.order-tabs button {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  background: #e3e3e3;
+  color: #1e3a3a;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.order-tabs button.active {
+  background: #1e3a3a;
+  color: #fff;
+}
+.order-form-area {
+  background: #fff;
+  border: 1.5px solid #1e3a3a;
+  border-radius: 0 12px 12px 12px;
+  padding: 32px 24px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.order-form-content {
+  display: flex;
+  gap: 32px;
+}
+.order-form-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.order-form-left label {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  color: #222;
+  margin-bottom: 2px;
+}
+.order-form-left input {
+  margin-top: 4px;
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.order-form-right {
+  flex: 1.2;
+  background: #e9f0ef;
+  border-radius: 8px;
+  padding: 18px 12px;
+  min-width: 320px;
+}
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.ref-table th, .ref-table td {
+  border-bottom: 1px solid #c2d1d1;
+  padding: 8px 6px;
+  text-align: left;
+}
+.ref-table th {
+  background: #e3e3e3;
+  font-size: 16px;
+}
+.ref-table input {
+  width: 95%;
+  padding: 6px 8px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.save-btn {
+  margin-top: 18px;
+  background: #1e3a3a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.save-btn:hover {
+  background: #2e5a5a;
+}
+.success-msg {
+  margin-top: 12px;
+  color: #1e7a1e;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Kariyerim (CareerPage) */
+.career-page {
+  flex: 1;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Satış Takip Paneli */
+.sales-panel {
+  flex: 1;
+  padding: 48px 32px;
+  background: #fff;
+  border-radius: 16px;
+  margin: 36px 36px 36px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  min-width: 0;
+}
+.sales-activity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.active-btn, .inactive-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: default;
+}
+.active-btn {
+  background: #1e3a3a;
+  color: #fff;
+}
+.inactive-btn {
+  background: #e3e3e3;
+  color: #b00;
+}
+.sales-tables {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.sales-table-block {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 24px 18px;
+  min-width: 340px;
+  flex: 1;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+.sales-table-block h3 {
+  margin-bottom: 12px;
+  color: #1e3a3a;
+  font-size: 18px;
+}
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 15px;
+}
+.sales-table th, .sales-table td {
+  padding: 10px 8px;
+  text-align: left;
+}
+.sales-table th {
+  background: #e3e3e3;
+  color: #0d2323;
+  font-weight: bold;
+}
+.sales-table tr:nth-child(even) td {
+  background: #f3f3f3;
+}
+.sales-table tr:hover td {
+  background: #ffe680;
+}
+.desc {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Memnun Müşteri Takip Paneli */
+.happy-panel {
+  flex: 1;
+  padding: 48px 32px;
+  background: #fff;
+  border-radius: 16px;
+  margin: 36px 36px 36px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  min-width: 0;
+}
+.happy-table-wrap {
+  overflow-x: auto;
+}
+.happy-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 15px;
+  margin-top: 12px;
+}
+.happy-table th, .happy-table td {
+  padding: 12px 10px;
+  text-align: left;
+}
+.happy-table th {
+  background: #1e3a3a;
+  color: #ffe680;
+  font-weight: bold;
+  font-size: 16px;
+}
+.happy-table tr:nth-child(even) td {
+  background: #f3f3f3;
+}
+.happy-table tr:hover td {
+  background: #ffe680;
+  color: #1e3a3a;
+}
+.ref-list-btn {
+  background: #ffe680;
+  color: #1e3a3a;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.ref-list-btn:hover {
+  background: #fff2b3;
+}
+.ref-list-popup {
+  position: absolute;
+  z-index: 10;
+  background: #fff;
+  border: 1.5px solid #1e3a3a;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  padding: 12px 18px;
+  margin-top: 6px;
+  min-width: 220px;
+}
+.ref-list-popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ref-list-popup li {
+  padding: 4px 0;
+  font-size: 15px;
+  color: #1e3a3a;
+}
+
+/* Sponsorluk Takip Paneli */
+.sponsorship-panel {
+  flex: 1;
+  padding: 48px 32px;
+  background: #fff;
+  border-radius: 16px;
+  margin: 36px 36px 36px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  min-width: 0;
+}
+.sponsorship-table-wrap {
+  overflow-x: auto;
+}
+.sponsorship-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 15px;
+  margin-top: 12px;
+}
+.sponsorship-table th, .sponsorship-table td {
+  padding: 12px 10px;
+  text-align: left;
+}
+.sponsorship-table th {
+  background: #1e3a3a;
+  color: #ffe680;
+  font-weight: bold;
+  font-size: 16px;
+}
+.sponsorship-table tr:nth-child(even) td {
+  background: #f3f3f3;
+}
+.sponsorship-table tr:hover td {
+  background: #ffe680;
+  color: #1e3a3a;
+}
+.bonus-cell {
+  color: #b80000;
+  font-weight: bold;
+}
+
+/* Takım Takip Paneli */
+.team-panel {
+  flex: 1;
+  padding: 48px 32px;
+  background: #fff;
+  border-radius: 16px;
+  margin: 36px 36px 36px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  min-width: 0;
+}
+.team-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+}
+.team-tabs button {
+  padding: 14px 38px;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  background: #e3e3e3;
+  color: #1e3a3a;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 2px;
+}
+.team-tabs button.active {
+  background: #1e3a3a;
+  color: #fff;
+}
+.team-table-wrap {
+  background: #f7f7f7;
+  border-radius: 0 0 12px 12px;
+  padding: 0 0 24px 0;
+}
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 15px;
+  margin-top: 0;
+}
+.team-table th, .team-table td {
+  padding: 12px 10px;
+  text-align: left;
+}
+.team-table th {
+  background: #1e3a3a;
+  color: #ffe680;
+  font-weight: bold;
+  font-size: 16px;
+}
+.team-table tr:nth-child(even) td {
+  background: #f3f3f3;
+}
+.team-table tr:hover td {
+  background: #ffe680;
+  color: #1e3a3a;
+}
+.team-warning {
+  margin-top: 18px;
+  background: #fff;
+  border-left: 5px solid #1e3a3a;
+  color: #1e3a3a;
+  font-size: 16px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  width: fit-content;
+}
+.franchise-warning-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+  gap: 32px;
+}
+.franchise-level-box {
+  background: #b80000;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 16px;
+  padding: 24px 48px;
+  text-align: center;
+  box-shadow: 0 2px 12px #0004;
+}
+.franchise-info-box {
+  background: #3ca0d7;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 18px;
+  padding: 32px 38px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 2px 12px #0002;
+}
+
+/* Liderlik ve Başkanlık Takip Paneli */
+.leadership-pools-panel {
+  flex: 1;
+  padding: 48px 32px;
+  background: #fff;
+  border-radius: 16px;
+  margin: 36px 36px 36px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  min-width: 0;
+}
+.leadership-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+}
+.leadership-tabs button {
+  padding: 14px 38px;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  background: #e3e3e3;
+  color: #1e3a3a;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 2px;
+}
+.leadership-tabs button.active {
+  background: #1e3a3a;
+  color: #fff;
+}
+.pool-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-top: 48px;
+}
+.pool-amount-box {
+  background: #e3e3e3;
+  color: #1e3a3a;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 16px;
+  padding: 24px 48px;
+  text-align: center;
+  box-shadow: 0 2px 12px #0002;
+}
+.pool-warning-box {
+  background: #3ca0d7;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 18px;
+  padding: 32px 38px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 2px 12px #0002;
+}
+
+/* Login ekranı */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+}
+.login-form {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #0002;
+  padding: 48px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 320px;
+}
+.login-form h2 {
+  margin-bottom: 12px;
+  color: #1e3a3a;
+  font-size: 26px;
+  text-align: center;
+}
+.login-form input {
+  padding: 12px 10px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 17px;
+}
+.login-form button {
+  background: #1e3a3a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.login-form button:hover {
+  background: #2e5a5a;
+}
+.login-error {
+  color: #b80000;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* Çıkış Yap butonu */
+.logout-btn {
+  background: #b80000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: background 0.2s;
+}
+.logout-btn:hover {
+  background: #e74c3c;
+}
